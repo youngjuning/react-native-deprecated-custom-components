@@ -32,7 +32,6 @@ import {
   Platform,
   StyleSheet,
   View,
-  ViewPropTypes,
 } from 'react-native';
 var PropTypes = require('prop-types');
 
@@ -66,7 +65,9 @@ class NavigatorNavigationBar extends React.Component {
       presentedIndex: PropTypes.number,
     }),
     navigationStyles: PropTypes.object,
-    style: ViewPropTypes.style,
+    style: PropTypes.shape({
+      style: PropTypes.object,
+    }),
   };
 
   static Styles = NavigatorNavigationBarStyles;

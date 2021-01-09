@@ -1,4 +1,4 @@
-# React Native Legacy Custom Components
+# React Native Legacy Custom Components Web
 
 This is a module for legacy "CustomComponents" to gracefully deprecate.
 

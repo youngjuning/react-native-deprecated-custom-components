@@ -29,7 +29,6 @@ import {
   Platform,
   StyleSheet,
   View,
-  ViewPropTypes,
 } from 'react-native';
 import React from 'react';
 
@@ -97,7 +96,9 @@ class NavigatorBreadcrumbNavigationBar extends React.Component {
       routeStack: PropTypes.arrayOf(PropTypes.object),
       presentedIndex: PropTypes.number,
     }),
-    style: ViewPropTypes.style,
+    style: PropTypes.shape({
+      style: PropTypes.object,
+    }),
   };
 
   static Styles = NavigatorBreadcrumbNavigationBarStyles;

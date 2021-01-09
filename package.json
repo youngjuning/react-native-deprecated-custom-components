@@ -1,21 +1,30 @@
 {
-  "name": "react-native-deprecated-custom-components",
+  "name": "react-native-deprecated-custom-components-web",
   "version": "0.1.1",
-  "description": "Deprecated custom components that originally shipped with React Native",
+  "description": "Deprecated custom components that originally shipped with React Native for web",
   "repository": {
     "type": "git",
     "url": "git@github.com:facebookarchive/react-native-custom-components.git"
   },
-  "main": "src/CustomComponents.js",
+  "scripts": {
+    "build": "del dist && babel src --ignore __tests__ --out-dir dist --copy-files",
+    "prepublishOnly": "yarn build"
+  },
+  "main": "dist/CustomComponents.js",
   "dependencies": {
+    "create-react-class": "15.6.2",
     "fbjs": "~0.8.9",
     "immutable": "~3.7.6",
-    "create-react-class": "15.6.2",
     "prop-types": "^15.5.10",
     "react-timer-mixin": "^0.13.2",
     "rebound": "^0.0.13"
   },
   "peerDependencies": {
     "react-native": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-native": "^4.0.1",
+    "del-cli": "^3.0.1"
   }
 }
